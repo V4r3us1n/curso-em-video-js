@@ -101,11 +101,73 @@
     </code></pre>
 
     <p>
-        Você tembém pode disparar os eventos usando "<strong>listeners</strong>" que ficam dentro do JS.
+        Você tembém pode disparar os eventos usando "<strong>listeners</strong>" que ficam dentro do JS. Ex:
+    </p>
+    <pre><code>
+        //Nesse exemplo foi criado a variável fora das funções para ela ser global, mas isso pode acabar gerando uns problemas com memória por isso não é muito recomendado.
+
+        var a = document.querySelector('div#area');
+
+        //Tem que colocar um Listener para cada Evento!
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            //Essa função só será chamado quando o "clicar" for ativado
+            a.innerText = 'Clicou XD';
+            a.style.background = 'black';
+        }
+
+        function entrar() {
+            //Essa função vai ser chamada quando "passar o mouse" sobre a div
+            a.innerText = 'Entrou :D';
+        }
+
+        function sair() {
+            //Essa função vai ser chamada quando "tirar o mouse" de dentro da div
+            a.innerText = 'Saiu D:';
+            a.style.background = 'rgb(255, 0, 242)';
+        }
+    </code></pre>
+
+    <p>
+        Preste bastante atenção em seu código, pois o JS não avisa que ocorreu um erro, se algo estiver errado ele não avisa. Como achar esse erro então? Bom, basta dar um "inspecionar" na página, na parte 
+        superior do inspecionar vai ser notificado que houve um erro, em 'Console' ele vai mostrar o tipo de erro e vai apontar onde se encontra o erro, aí basta você corrigí-lo.
+    </p>
+    <p>
+        Veja o arquivo 'ex7', onde vão ser solicitados ao usuário 2 valores e esses valores serão somados ao clicar em um botão!
     </p>
 
+
     <script>
-        
+        //Nesse exemplo foi criado a variável fora das funções para ela ser global, mas isso pode acabar gerando uns problemas com memória por isso não é muito recomendado.
+
+        var a = document.querySelector('div#area');
+
+        //Tem que colocar um Listener para cada Evento!
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            //Essa função só será chamado quando o "clicar" for ativado
+            a.innerText = 'Clicou XD';
+            a.style.background = 'black';
+        }
+
+        function entrar() {
+            //Essa função vai ser chamada quando "passar o mouse" sobre a div
+            a.innerText = 'Entrou :D';
+        }
+
+        function sair() {
+            //Essa função vai ser chamada quando "tirar o mouse" de dentro da div
+            a.innerText = 'Saiu D:';
+            a.style.background = 'rgb(255, 0, 242)';
+        }
     </script>
 </body>
 </html>
