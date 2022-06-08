@@ -19,10 +19,6 @@ main {
     padding: 5px;
 }
 
-section.linha > p {
-    display: inline-block;
-}
-
 
 footer > p {
     text-align: center;
