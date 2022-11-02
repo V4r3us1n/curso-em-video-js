@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    <link rel="stylesheet" href="../estilo/style.css">
     <style>
         body {
             font: normal 18 pt Arial;
         }
         input {
             font: normal 18pt Arial;
+            color: black;
             width: 100px;
         }
 
@@ -21,8 +23,8 @@
 </head>
 <body>
     <h1>Somando Valores</h1>
-    <input type="number" name="n1" id="n1">
-    <input type="number" name="n2" id="n2">
+    <input title="valor 1" type="number" name="n1" id="n1">
+    <input title="valor 2" type="number" name="n2" id="n2">
     <input type="button" value="Somar" onclick="somar()">
 
     <div id="res">Resultado</div>
